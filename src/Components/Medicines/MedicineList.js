@@ -9,7 +9,8 @@ const MedicineList = (props) => {
       <ul>
         {props.medicines.map((medicines) => (
           <li key={medicines.id}>
-            {medicines.name} ({medicines.age} years old)
+            {`${medicines.Medicine} ${medicines.Description} Quantity
+            ${medicines.Quantity}`}
           </li>
         ))}
       </ul>

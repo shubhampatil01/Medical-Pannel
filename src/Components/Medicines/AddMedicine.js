@@ -56,9 +56,9 @@ const AddMedicine = (props) => {
       <Card className={classes.input}>
         <form onSubmit={addMedicineHandler}>
           <label htmlFor="medicine">Medicine Name</label>
-          <input id="medicine" type="text" ref={descriptionInputRef} />
+          <input id="medicine" type="text" ref={medicineInputRef} />
           <label htmlFor="description">Description</label>
-          <input id="description" type="textarea" ref={quantityInputRef} />
+          <input id="description" type="textarea" ref={descriptionInputRef} />
           <label htmlFor="quantity">Quantity</label>
           <input id="quantity" type="number" ref={quantityInputRef} />
           <Button type="submit">Add Medicine</Button>
