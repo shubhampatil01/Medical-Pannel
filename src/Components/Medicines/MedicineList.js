@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../Store/cart-context";
 
 import Card from "../UI/Card";
 import classes from "./MedicineList.module.css";
 
 const MedicineList = (props) => {
+  const cartCtx = useContext(CartContext);
   return (
     <Card className={classes.users}>
       <ul>
-        {props.medicines.map((medicines) => (
+        {cartCtx.items.map((medicines) => (
           <li key={medicines.id}>
-            {`${medicines.Medicine} ${medicines.Description} Quantity
-            ${medicines.Quantity}`}
+            {`${medicines.medicine} ${medicines.description} Quantity
+            ${medicines.amount}`}
           </li>
         ))}
       </ul>
